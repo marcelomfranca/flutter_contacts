@@ -30,6 +30,15 @@ apply plugin: 'kotlin-android'
 android {
     compileSdkVersion 31
 
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = '17'
+    }
+
     if (!project.hasProperty("namespace")) {
         namespace 'co.quis.flutter_contacts'
     }
